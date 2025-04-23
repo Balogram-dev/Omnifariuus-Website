@@ -28,25 +28,4 @@ document.addEventListener('DOMContentLoaded', function() {
             item.classList.toggle('active');
         });
     });
-    
-    // Blog Accordion
-    const blogCards = document.querySelectorAll('.blog-card');
-    
-    blogCards.forEach(card => {
-        const header = card.querySelector('.blog-header');
-        
-        header.addEventListener('click', () => {
-            // Close all other cards
-            blogCards.forEach(otherCard => {
-                if (otherCard !== card && otherCard.classList.contains('active')) {
-                    otherCard.classList.remove('active');
-                }
-            });
-            
-            // Toggle current card
-            card.classList.toggle('active');
-        });
-    });
 });
-
-
